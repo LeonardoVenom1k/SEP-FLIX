@@ -50,30 +50,50 @@
   <h2>FILMES</h2>
 </div>
 
-<div class="container">
-  <div class="row g-3">
+<div class="position-relative">
+  <!-- Botão Esquerdo -->
+  <button class="scroll-btn left-btn" onclick="scrollLeft('filme-carousel')">&#10094;</button>
+
+  <!-- Botão Direito -->
+  <button class="scroll-btn right-btn" onclick="scrollRight('filme-carousel')">&#10095;</button>
+
+  <!-- Carrossel -->
+  <div id="filme-carousel" class="scrolling-wrapper d-flex px-3">
+
     <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Carros">
       <a href="Filmes/Animação/filme_carros.html">
-        <img src="img/Carros.jpg" class="img-fluid" alt="Carros">
+        <img src="img/Filmes/Carros.jpg" class="img-fluid" alt="Carros">
       </a>
     </div>
+
     <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Carros 2">
       <a href="Filmes/Animação/filme_carros2.html">
-        <img src="img/Carros 2.jpg" class="img-fluid" alt="Carros 2">
+        <img src="img/Filmes/Carros 2.jpg" class="img-fluid" alt="Carros 2">
       </a>
     </div>
+
     <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Carros 3">
       <a href="Filmes/Animação/filme_carros3.html">
-        <img src="img/Carros 3.jpg" class="img-fluid" alt="Carros 3">
+        <img src="img/Filmes/Carros 3.jpg" class="img-fluid" alt="Carros 3">
       </a>
     </div>
-    <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Super Heroi">
+
+    <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Super Heroi O Filme">
       <a href="Filmes/Comédia/superheroi.html">
-        <img src="img/Super Heroi.jpg" class="img-fluid" alt="Super Herói">
+        <img src="img/Filmes/Super Heroi.jpg" class="img-fluid" alt="Super Herói">
       </a>
     </div>
+
+    <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Guerra Mundial Z">
+      <a href="Filmes/Ação/guerramundialz.html">
+        <img src="img/Filmes/Guerra Mundial Z.jpg" class="img-fluid" alt="Guerra Mundial Z">
+      </a>
+    </div>
+
   </div>
 </div>
+
+
 
 <br><br>
 
@@ -85,16 +105,16 @@
   <div class="container">
       <div class="row g-3">
           <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Teen  Wolf">
-              <img src="img/Teen Wolf.jpg" class="img-fluid" alt="...">
+              <img src="img/Series/Teen Wolf.jpg" class="img-fluid" alt="...">
           </div>
           <div class="col-md-3 col-sm-6 col-12 mb-4">
-              <img src="img/Teen Wolf.jpg" class="img-fluid" alt="...">
+              <img src="img/Series/Teen Wolf.jpg" class="img-fluid" alt="...">
           </div>
           <div class="col-md-3 col-sm-6 col-12 mb-4"">
-              <img src="img/Teen Wolf.jpg" class="img-fluid" alt="...">
+              <img src="img/Series/Teen Wolf.jpg" class="img-fluid" alt="...">
           </div>
           <div class="col-md-3 col-sm-6 col-12 mb-4">
-              <img src="img/Teen Wolf.jpg" class="img-fluid" alt="...">
+              <img src="img/Series/Teen Wolf.jpg" class="img-fluid" alt="...">
           </div>
 
   </div>
@@ -111,13 +131,13 @@
 <div class="container">
     <div class="row g-3">
         <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <img src="img/Premiere.png" class="img-fluid" alt="...">
+            <img src="img/Canais/Premiere.png" class="img-fluid" alt="...">
         </div>
         <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <img src="img/Premiere.png" class="img-fluid" alt="...">
+            <img src="img/Canais/Premiere.png" class="img-fluid" alt="...">
         </div>
         <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <img src="img/Premiere.png" class="img-fluid" alt="...">
+            <img src="img/Canais/Premiere.png" class="img-fluid" alt="...">
         </div>
 
 
@@ -140,6 +160,18 @@ function filtrarItens() {
     }
   });
 }
+</script>
+
+<script>
+  function scrollLeft(id) {
+    const container = document.getElementById(id);
+    container.scrollBy({ left: -container.offsetWidth, behavior: 'smooth' });
+  }
+
+  function scrollRight(id) {
+    const container = document.getElementById(id);
+    container.scrollBy({ left: container.offsetWidth, behavior: 'smooth' });
+  }
 </script>
 
     

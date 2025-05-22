@@ -25,20 +25,82 @@ body {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
   }
   
-  .filme-card:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-  }
-.overflow-auto::-webkit-scrollbar {
-  height: 8px;
+.scrolling-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
-.overflow-auto::-webkit-scrollbar-thumb {
-  background-color: #888;
+.scrolling-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.card img {
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Carrossel horizontal */
+.scrolling-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+/* Esconde barra de rolagem no Chrome */
+.scrolling-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Botões de rolagem (setas) */
+.scroll-btn {
+  position: absolute;
+  top: 35%;
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+  padding: 5px 10px;
   border-radius: 10px;
+  display: none;
 }
 
-.overflow-auto::-webkit-scrollbar-track {
-  background-color: #222;
+.left-btn {
+  left: 0;
 }
+
+.right-btn {
+  right: 0;
+}
+
+/* No PC os botões aparecem */
+@media (min-width: 768px) {
+  .scroll-btn {
+    display: block;
+  }
+}
+
+/* No celular ocupa mais espaço horizontal */
+@media (max-width: 768px) {
+  .scrolling-wrapper .card {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+}
+
