@@ -19,10 +19,7 @@
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#film">Filmes</a>
+          <a class="nav-link" href="filmes.html">Filmes</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#seri">Séries</a>
@@ -41,8 +38,7 @@
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="Pesquisar" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+        <input class="form-control me-2" type="text" placeholder="Pesquisar" aria-label="Pesquisar" id="barraPesquisa" onkeyup="filtrarItens()">
       </form>
     </div>
   </div>
@@ -50,55 +46,62 @@
 
 <br><br>
 
-    <div class="container text-light" id="film">
-        <h2>FILMES</h2>
+<div class="container text-light" id="film">
+  <h2>FILMES</h2>
+</div>
+
+<div class="container">
+  <div class="row g-3">
+    <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Carros">
+      <a href="Filmes/Animação/filme_carros.html">
+        <img src="img/Carros.jpg" class="img-fluid" alt="Carros">
+      </a>
     </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <a href="Filmes/Animação/filme_carros.html">
-                <img src="img/Carros.jpg" class="img-fluid" alt="Carros">
-            </a>
-            </div>
-            <div class="col-md-3">
-                <img src="img/Carros 2.jpg" class="img-fluid" alt="...">
-            </div>
-            <div class="col-md-3">
-                <img src="img/Carros 3.jpg" class="img-fluid" alt="...">
-            </div>
-            <div class="col-md-3">
-                <img src="img/Super Heroi.jpg" class="img-fluid" alt="...">
-            </div>
+    <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Carros 2">
+      <a href="Filmes/Animação/filme_carros2.html">
+        <img src="img/Carros 2.jpg" class="img-fluid" alt="Carros 2">
+      </a>
     </div>
-
-    <br><br>
-
+    <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Carros 3">
+      <a href="Filmes/Animação/filme_carros3.html">
+        <img src="img/Carros 3.jpg" class="img-fluid" alt="Carros 3">
+      </a>
     </div>
-    <div class="container text-light" id="seri">
-        <h2>SÉRIES</h2>
+    <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Super Heroi">
+      <a href="Filmes/Comédia/superheroi.html">
+        <img src="img/Super Heroi.jpg" class="img-fluid" alt="Super Herói">
+      </a>
     </div>
+  </div>
+</div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <img src="img/Teen Wolf.jpg" class="img-fluid" alt="...">
-            </div>
-            <div class="col-md-3">
-                <img src="img/Teen Wolf.jpg" class="img-fluid" alt="...">
-            </div>
-            <div class="col-md-3">
-                <img src="img/Teen Wolf.jpg" class="img-fluid" alt="...">
-            </div>
-            <div class="col-md-3">
-                <img src="img/Teen Wolf.jpg" class="img-fluid" alt="...">
-            </div>
+<br><br>
 
-    </div>
+  </div>
+  <div class="container text-light" id="seri">
+      <h2>SÉRIES</h2>
+  </div>
 
-    </div>
+  <div class="container">
+      <div class="row g-3">
+          <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Teen  Wolf">
+              <img src="img/Teen Wolf.jpg" class="img-fluid" alt="...">
+          </div>
+          <div class="col-md-3 col-sm-6 col-12 mb-4">
+              <img src="img/Teen Wolf.jpg" class="img-fluid" alt="...">
+          </div>
+          <div class="col-md-3 col-sm-6 col-12 mb-4"">
+              <img src="img/Teen Wolf.jpg" class="img-fluid" alt="...">
+          </div>
+          <div class="col-md-3 col-sm-6 col-12 mb-4">
+              <img src="img/Teen Wolf.jpg" class="img-fluid" alt="...">
+          </div>
 
-    <br><br>
+  </div>
+
+  </div>
+
+<br><br>
 
 </div>
 <div class="container text-light">
@@ -106,14 +109,14 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-4">
+    <div class="row g-3">
+        <div class="col-md-4 col-sm-6 col-12 mb-4">
             <img src="img/Premiere.png" class="img-fluid" alt="...">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-12 mb-4">
             <img src="img/Premiere.png" class="img-fluid" alt="...">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-12 mb-4">
             <img src="img/Premiere.png" class="img-fluid" alt="...">
         </div>
 
@@ -121,6 +124,24 @@
 </div>
 
 </div>
+
+<script>
+function filtrarItens() {
+  const input = document.getElementById('barraPesquisa');
+  const filtro = input.value.toLowerCase();
+  const itens = document.querySelectorAll('[data-nome]');
+
+  itens.forEach(item => {
+    const nome = item.getAttribute('data-nome').toLowerCase();
+    if (nome.includes(filtro)) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+</script>
+
     
 </body>
 </html>
