@@ -26,28 +26,59 @@
   </div>
 </nav>
 
-  <div class="container my-5">
-    <h2 class="mb-4">Filmes por Categoria</h2>
-
     <!-- CATEGORIA: ANIMAÇÃO -->
-    <h3 class="mt-5">🎨 Animação</h3>
-    <div class="row g-3">
+    <div class="container">
+    <h3 class="mt-5">ANIMAÇÃO</h3>
+
+    <div class="position-relative">
+  <!-- Botão Esquerdo -->
+  <button class="scroll-btn left-btn" onclick="scrollLeft('anima-c')">&#10094;</button>
+
+  <!-- Botão Direito -->
+  <button class="scroll-btn right-btn" onclick="scrollRight('anima-c')">&#10095;</button>
+
+  <!-- Carrossel -->
+  <div id="anima-c" class="scrolling-wrapper d-flex px-3">
+
       <div class="col-md-3 col-sm-6 col-12 mb-4"data-nome="Carros">
         <a href="Filmes/Animação/filme_carros.html">
-          <img src="img/Filmes/Carros.jpg" class="img-fluid rounded" alt="Carros">
+          <img src="img/Filmes/Carros.jpg" class="img-fluid" alt="Carros">
         </a>
       </div>
       <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Carros 2">
         <a href="Filmes/Animação/filme_carros2.html">
-          <img src="img/Filmes/Carros 2.jpg 2.jpg" class="img-fluid rounded" alt="Carros 2">
+          <img src="img/Filmes/Carros 2.jpg" class="img-fluid" alt="Carros 2">
         </a>
       </div>
       <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Carros 3">
         <a href="Filmes/Animação/filme_carros3.html">
-          <img src="img/Filmes/Carros 3.jpg 3.jpg" class="img-fluid rounded" alt="Carros 3">
+          <img src="img/Filmes/Carros 3.jpg" class="img-fluid" alt="Carros 3">
         </a>
       </div>
     </div>
+    </div>
+
+        <!-- CATEGORIA: Ação -->
+    <div class="container">
+    <h3 class="mt-5">AÇÃO</h3>
+
+        <div class="position-relative">
+  <!-- Botão Esquerdo -->
+  <button class="scroll-btn left-btn" onclick="scrollLeft('acao-c')">&#10094;</button>
+
+  <!-- Botão Direito -->
+  <button class="scroll-btn right-btn" onclick="scrollRight('acao-c')">&#10095;</button>
+
+  <!-- Carrossel -->
+  <div id="acao-c" class="scrolling-wrapper d-flex px-3">
+
+       <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Guerra Mundial Z">
+      <a href="Filmes/Ação/guerramundialz.html">
+        <img src="img/Filmes/Guerra Mundial Z.jpg" class="img-fluid" alt="Guerra Mundial Z">
+      </a>
+    </div>
+    </div>
+        </div>
 
 <script>
 function filtrarItens() {
@@ -64,4 +95,16 @@ function filtrarItens() {
     }
   });
 }
+</script>
+
+<script>
+  function scrollLeft(id) {
+    const container = document.getElementById(id);
+    container.scrollBy({ left: -container.offsetWidth, behavior: 'smooth' });
+  }
+
+  function scrollRight(id) {
+    const container = document.getElementById(id);
+    container.scrollBy({ left: container.offsetWidth, behavior: 'smooth' });
+  }
 </script>

@@ -22,7 +22,7 @@
           <a class="nav-link" href="filmes.html">Filmes</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#seri">Séries</a>
+            <a class="nav-link" href="#tv">Canais</a>
           </li>
         </li>
         <li class="nav-item dropdown">
@@ -93,33 +93,45 @@
   </div>
 </div>
 
-
-
 <br><br>
 
-  </div>
-  <div class="container text-light" id="seri">
-      <h2>SÉRIES</h2>
-  </div>
+<div class="position-relative">
+  <!-- Botão Esquerdo -->
+  <button class="scroll-btn left-btn" onclick="scrollLeft('film2-carousel')">&#10094;</button>
 
-  <div class="container">
-      <div class="row g-3">
-          <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Teen  Wolf">
-              <img src="img/Series/Teen Wolf.jpg" class="img-fluid" alt="...">
+  <!-- Botão Direito -->
+  <button class="scroll-btn right-btn" onclick="scrollRight('film2-carousel')">&#10095;</button>
+
+  <!-- Carrossel -->
+  <div id="film2-carousel" class="scrolling-wrapper d-flex px-3">
+
+          <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Meu Malvado Favorito">
+            <a href="Filmes/Animação/meumalvadofavorito.html">
+              <img src="img/Filmes/Meu Malvado Favorito.jpg" class="img-fluid" alt="Meu Malvado Favorito">
+              </a>
           </div>
-          <div class="col-md-3 col-sm-6 col-12 mb-4">
-              <img src="img/Series/Teen Wolf.jpg" class="img-fluid" alt="...">
+
+          <div class="col-md-3 col-sm-6 col-12 mb-4" data-nome="Minecraft O Filme">
+            <a href="Filmes/Comédia/umfilmeminecraft.html">
+              <img src="img/Filmes/Minecraft.jpg" class="img-fluid" alt="Minecraft O Filme">
+              </a>
           </div>
+
           <div class="col-md-3 col-sm-6 col-12 mb-4"">
               <img src="img/Series/Teen Wolf.jpg" class="img-fluid" alt="...">
           </div>
+
           <div class="col-md-3 col-sm-6 col-12 mb-4">
               <img src="img/Series/Teen Wolf.jpg" class="img-fluid" alt="...">
           </div>
 
-  </div>
+          <div class="col-md-3 col-sm-6 col-12 mb-4">
+            <img src="img/Series/Teen Wolf.jpg" class="img-fluid" alt="...">
+        </div>
 
-  </div>
+      </div>
+    </div>
+</div>
 
 <br><br>
 
@@ -128,16 +140,35 @@
     <h2>CANAIS</h2>
 </div>
 
-<div class="container">
-    <div class="row g-3">
-        <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <img src="img/Canais/Premiere.png" class="img-fluid" alt="...">
+<div class="position-relative">
+  <!-- Botão Esquerdo -->
+  <button class="scroll-btn left-btn" onclick="scrollLeft('tv-carousel')">&#10094;</button>
+
+  <!-- Botão Direito -->
+  <button class="scroll-btn right-btn" onclick="scrollRight('tv-carousel')">&#10095;</button>
+
+  <!-- Carrossel -->
+  <div id="tv-carousel" class="scrolling-wrapper d-flex px-3">
+
+        <div class="col-md-4 col-sm-6 col-12 mb-4"  data-nome="Cartoon-Network">
+          <a href="Canais/cartoonnetwork.html">
+            <img src="img/Canais/Cartoon-Network.jpg" class="img-fluid" alt="Cartoon-Network">
+            </a>
         </div>
-        <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <img src="img/Canais/Premiere.png" class="img-fluid" alt="...">
+        <div class="col-md-4 col-sm-6 col-12 mb-4"  data-nome="Premiere 1">
+          <a href="Canais/premiere1.html">
+            <img src="img/Canais/Premiere.png" class="img-fluid" alt="Premiere 1">
+            </a>
         </div>
-        <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <img src="img/Canais/Premiere.png" class="img-fluid" alt="...">
+        <div class="col-md-4 col-sm-6 col-12 mb-4" data-nome="Premiere 2">
+          <a href="Canais/premiere2.html">
+            <img src="img/Canais/Premiere.png" class="img-fluid" alt="Premiere 2">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12 mb-4" data-nome="Premiere 3">
+          <a href="Canais/premiere3.html">
+            <img src="img/Canais/Premiere.png" class="img-fluid" alt="Premiere 3">
+            </a>
         </div>
 
 
